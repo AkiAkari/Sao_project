@@ -24,7 +24,7 @@
   font-family: serif;
   font-variant: small-caps;
   text-align: center;
-  font-size: 100%;
+  font-size: 200%;
   display: flex;
   letter-spacing: 0.1em;
   justify-content: center; /* Центрируем текст внутри flex-контейнера */
@@ -94,7 +94,7 @@
   position: relative;
   width: 100%;
   max-width: 550px; /* Ограничиваем максимальную длину для баланса */
-  height: 50px;     /* Толщина клинка */
+  height: 40px;     /* Толщина клинка */
   
   /* ЦЕНТР БЕЗ БЛИКА: благородный бирюзовый градиент без белого цвета внутри */
   background: linear-gradient(
@@ -120,7 +120,7 @@
   right: -28px; /* Идеальный стык */
   top: -2px;    /* Выравнивание по рамке */
   width: 30px;
-  height: 50px;
+  height: 40px;
   box-sizing: border-box;
   
   /* БЛИК НА КОНЦЕ: пятислойный градиент с белым бликом по центру */
@@ -145,7 +145,7 @@
   left: -28px;  /* Идеальный стык */
   top: -2px;    /* Выравнивание по рамке */
   width: 30px;
-  height: 50px;
+  height: 40px;
   box-sizing: border-box;
   
   /* БЛИК НА КОНЦЕ: пятислойный градиент с белым бликом по центру */
