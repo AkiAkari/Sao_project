@@ -1,0 +1,176 @@
+.flex {
+    display: flex; /* Выстраивает элементы в строку */
+    gap: 15px;      /* Создает отступ между блоками */
+}
+
+#start-screen{
+    margin: 0;
+  padding: 20px;
+  width: 100%;
+  min-height: 100vh; /* Растягиваем на всю высоту экрана */
+  box-sizing: border-box;
+  background-image: url('C://Users//alexi//OneDrive//Aki_akari//sao project//aincrad_3.jpg');
+  background-size: cover;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Центр по горизонтали */
+  align-items: center;     /* Центр по вертикали */
+  overflow: hidden;        /* Защита от появления полос прокрутки */
+}
+
+/* Общие стили для текста SAO и текста внутри кнопки */
+#sao, #btn-start {
+  font-family: serif;
+  font-variant: small-caps;
+  text-align: center;
+  font-size: 350%;
+  display: flex;
+  letter-spacing: 0.1em;
+  justify-content: center; /* Центрируем текст внутри flex-контейнера */
+  
+  /* ЭФФЕКТ 1: Основной объемный градиент */
+  background-image: linear-gradient(
+    to bottom,
+    #0d5b54 0%,
+    #3cb4a4 25%,
+    #ffffff 50%,
+    #219687 75%,
+    #08423d 100%
+  );
+
+  /* Вырезаем градиент по форме букв */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+
+  /* ЭФФЕКТ 2: Тонкая внешняя светлая обводка букв */
+  -webkit-text-stroke: 1.5px #a7ebd9;
+  
+  /* Плавный переход для всех будущих анимаций */
+  transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
+}
+
+/* УНИКАЛЬНЫЕ СТИЛИ ДЛЯ КНОПКИ START */
+#btn-start {
+  /* Сброс дефолтных рамок и фона кнопки */
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  
+  /* ПОЗИЦИОНИРОВАНИЕ: Опускаем кнопку чуть ниже меча */
+  margin-top: 25px; 
+  display: inline-flex; /* Корректное отображение для анимации масштаба */
+  
+  /* Базовая тень текста (как у SAO) */
+  filter: drop-shadow(3px 3px 2px rgba(0, 20, 20, 0.8));
+}
+
+/* ЭФФЕКТ ПРИ НАВЕДЕНИИ КУРСОРА (HOVER) */
+#btn-start:hover {
+  /* Кнопка плавно увеличивается на 7% */
+  transform: scale(1.07);
+  
+  /* Усиливаем яркость и добавляем бирюзовое неоновое свечение вокруг букв */
+  filter: brightness(1.2) drop-shadow(0 0 12px rgba(0, 0, 0, 0.8));
+}
+
+/* ЭФФЕКТ ПРИ НАЖАТИИ (ACTIVE) */
+#btn-start:active {
+  /* Физическая отдача: кнопка становится чуть меньше, имитируя вдавливание */
+  transform: scale(0.98);
+  
+  /* Свечение становится чуть мягче в момент клика */
+  filter: brightness(1.1) drop-shadow(0 0 6px rgba(0, 0, 0, 0.8));
+}
+
+
+
+/* Основное тело меча */
+#sword {
+  position: relative;
+  width: 100%;
+  max-width: 550px; /* Ограничиваем максимальную длину для баланса */
+  height: 34px;     /* Толщина клинка */
+  
+  /* ЦЕНТР БЕЗ БЛИКА: благородный бирюзовый градиент без белого цвета внутри */
+  background: linear-gradient(
+    to bottom,
+    #0d5b54 0%,
+    #219687 50%,
+    #08423d 100%
+  );
+  
+  border-top: 2px solid #a7ebd9;
+  border-bottom: 2px solid #08423d;
+  box-sizing: border-box;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Острый кончик меча (справа) */
+#sword::after {
+  content: '';
+  position: absolute;
+  right: -28px; /* Идеальный стык */
+  top: -2px;    /* Выравнивание по рамке */
+  width: 30px;
+  height: 34px;
+  box-sizing: border-box;
+  
+  /* БЛИК НА КОНЦЕ: пятислойный градиент с белым бликом по центру */
+  background: linear-gradient(
+    to bottom,
+    #0d5b54 0%, 
+    #3cb4a4 25%, 
+    #ffffff 50%, /* Белый блик */
+    #219687 75%, 
+    #08423d 100%
+  );
+  
+  border-top: 2px solid #a7ebd9;
+  border-bottom: 2px solid #08423d;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+/* Левое острие (слева) */
+#sword::before {
+  content: '';
+  position: absolute;
+  left: -28px;  /* Идеальный стык */
+  top: -2px;    /* Выравнивание по рамке */
+  width: 30px;
+  height: 34px;
+  box-sizing: border-box;
+  
+  /* БЛИК НА КОНЦЕ: пятислойный градиент с белым бликом по центру */
+  background: linear-gradient(
+    to bottom,
+    #0d5b54 0%, 
+    #3cb4a4 25%, 
+    #ffffff 50%, /* Белый блик */
+    #219687 75%, 
+    #08423d 100%
+  );
+  
+  border-top: 2px solid #a7ebd9;
+  border-bottom: 2px solid #08423d;
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+}
+
+/* Текст внутри меча */
+.sword-text {
+  font-family: 'Futura Medium', Verdana, serif;
+  color: #ffffff;
+  font-weight: bold;
+  letter-spacing: 7px; /* Большое расстояние между буквами как в оригинале */
+  padding-left: 7px; /* Компенсация отступа для центровки */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  opacity: 0.9;
+  z-index: 2;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sao game</title>
+  <link rel="stylesheet" href="All-style.css">
+  <script>src="script.js"</script>
+</head>
+
+<body>
+    <!-- СТАРТОВЫЙ ЭКРАН (название, айнкрад, старт) -->
+  <div id="start-screen">
+    <h1 id="sao">Sword Art Online</h1>
+    <div id="sword"><span class="sword-text">Fall of Immortal Object</span></div>
+    <button id="btn-start"><span class="btn-text">Start</span></button>
+    <audio src=""></audio>
+  </div>
+
+  <!-- СТАРТОВЫЙ ЭКРАН 2 (видео погружения+видео догадки о бессмертном объекте) -->
+  <div id="video-screen">
+    <video src=""></video>
+    <button id="skip-btn">Skip</button>
+  </div>
+
+  <!-- ЭКРАН МЕНЮ (immortal + пройти игру?) -->
+  <div id="menu-screen">
+    <div id="hpBar" class="flex">
+        <div id="Kirito">
+            <div class="flex">
+                <div id="?"></div>
+                <div class="flex" id="all">
+                    <div id="name">Kirito</div>
+                    <div id="hp_back">
+                        <div id="hp"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex">
+                <div id="hp_max">1000/1000</div>
+                <div id="lvl"> LV: 1</div>
+            </div>
+        </div>
+        <div id="Heathcliff">
+            <div class="flex">
+                <div id="?"></div>
+                <div class="flex" id="all">
+                    <div id="name">Heathcliff</div>
+                    <div id="hp_back">
+                        <div id="hp"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex">
+                <div id="hp_max">1000/1000</div>
+                <div id="lvl"> LV: 3</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="object" id="immortal">Immortal<br>object</div>
+
+    <div id="choice">
+      <h3>Принять вызов?</h3>
+      <button class="start" id="yes"></button>
+      <button class="start" id="no"></button>
+    </div>
+  </div>
+
+  <!-- ЭКРАН МЕНЮ 2 (пройти игру? -> выбор уровня) -->
+  <div id="level-screen">
+    <!-- оставить menu-screen только поменять div/choice на две другие кнопки -->
+  </div>
+
+  <!-- ЭКРАН БОЯ ЛЕГКИЙ (механика боя легкого уровня) -->
+   <!-- ЭКРАН БОЯ СЛОЖНЫЙ (механика боя сложного уровня) -->
+   <!-- ЭКРАН GAME OVER (win + видео айнкрад рушится) -->
+   <!-- ЭКРАН GAME OVER (lose + перенаправление на экран меню) -->
+  
+</body>
+
+</html>
