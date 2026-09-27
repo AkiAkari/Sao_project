@@ -9,7 +9,7 @@
   width: 100%;
   min-height: 100vh; /* Растягиваем на всю высоту экрана */
   box-sizing: border-box;
-  background-image: url('aincrad_3.jpg');
+  background-image: url("aincrad_3.jpg");
   background-size: cover;
   
   display: flex;
