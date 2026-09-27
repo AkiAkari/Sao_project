@@ -24,7 +24,7 @@
   font-family: serif;
   font-variant: small-caps;
   text-align: center;
-  font-size: 350%;
+  font-size: 250%;
   display: flex;
   letter-spacing: 0.1em;
   justify-content: center; /* Центрируем текст внутри flex-контейнера */
@@ -167,6 +167,7 @@
 .sword-text {
   font-family: 'Futura Medium', Verdana, serif;
   color: #ffffff;
+  text-align: center;
   font-weight: bold;
   letter-spacing: 7px; /* Большое расстояние между буквами как в оригинале */
   padding-left: 7px; /* Компенсация отступа для центровки */
